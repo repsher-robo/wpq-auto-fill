@@ -96,6 +96,7 @@ function waitSubmitCompletion(p_finalSubmit) {
 
 // click next/submit
 function clickNext() {
+	
 	// click the next btn if present
 	if ($("#jsonFormSubmit .btn-primary>span.glyphicon-chevron-right").is(":visible")) {
 		console.log("Clicking Next");
@@ -134,6 +135,14 @@ function clickNext() {
 		// wait for submit to complete then check for errors
 		waitSubmitCompletion(true);
 	}
+	else {
+		console.log("expected btns not present, waiting to try again");
+		// wait
+		setTimeout(() => {
+			clickNext();
+		}, 500);
+	}
+	
 }
 
 
