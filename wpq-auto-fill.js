@@ -23,11 +23,6 @@ function favorZerosAndOnes() {
 	return probabilities.length - 1; // Fallback, should not happen
 }
 
-// Example usage
-for (let i = 0; i < 100; i++) {
-	console.log(favorZerosAndOnes());
-}
-
 
 // answer all the questions on the page
 function answerQuestions() {
